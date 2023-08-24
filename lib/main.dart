@@ -9,7 +9,7 @@ void main() {
           gradient: LinearGradient(
             colors: [
               Color.fromARGB(255, 98, 196, 46),
-              Color.fromARGB(255, 166, 235, 129),
+              Color.fromARGB(255, 68, 174, 10),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
