@@ -18,21 +18,29 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       //double.infinity means use the entire width
       width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            currentQuestion.text,
-            style: const TextStyle(color: Color.fromARGB(255, 23, 23, 23)),
-          ),
-          const SizedBox(height: 30),
-          ...currentQuestion.answers.map(
-            (element) => AnswerButton(
-              answerText: element,
-              onTap: () {},
+      child: Container(
+        margin:const EdgeInsets.all(40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              currentQuestion.text,
+              style: const TextStyle(
+                color: Color.fromARGB(255, 23, 23, 23),
+                fontSize: 16,
+              ),
+              textAlign: TextAlign.center,
             ),
-          )
-        ],
+            const SizedBox(height: 30),
+            ...currentQuestion.answers.map(
+              (element) => AnswerButton(
+                answerText: element,
+                onTap: () {},
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
